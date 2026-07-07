@@ -515,7 +515,8 @@ of code below the Schedule `<h2>` header below with
 <div class="card mb-2">
   <h5 class="card-header">Schedule</h5>
   <div class="card-body">
-    {% assign schedule_file = site.carpentry | append: '/schedule.html' %}
+    <!-- {% assign schedule_file = site.carpentry | append: '/schedule.html' %} -->
+    {% assign schedule_file = site.carpentry | append: '/unix-only-schedule.html' %}
     {% if isOfficial %}
     {% include {{ schedule_file }} %}
     {% elsif site.carpentry == "incubator" %}
@@ -588,7 +589,8 @@ If you do not use Zoom for your online workshop, edit the file `_includes/instal
 These are the installation instructions for the tools used during the workshop.
 {% endcomment %}
 
-{% assign setup_file = site.carpentry | append: '/setup.html' %}
+<!-- {% assign setup_file = site.carpentry | append: '/setup.html' %} -->
+{% assign setup_file = site.carpentry | append: '/unix-only-setup.html' %}
 {% if isOfficial %}
   {% include {{ setup_file }} %}
 {% elsif site.carpentry == "incubator" %}
